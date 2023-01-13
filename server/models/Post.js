@@ -6,7 +6,7 @@ const PostSchema = new Schema({
         type:String,
         required:true,
     },
-    describtion:{
+    description:{
         type:String,
     },
     url:{

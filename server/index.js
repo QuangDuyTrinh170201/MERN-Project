@@ -1,7 +1,10 @@
 require('dotenv').config()
 const express = require('express')
 const mongoose = require('mongoose')
+
 const authRouter = require('./route/auth')
+const postRouter = require('./route/post')
+
 mongoose.set("strictQuery", false)
 const connectDB = async () => {
     try {
@@ -20,6 +23,7 @@ const app = express()
 app.use(express.json())
 
 app.use('/api/auth', authRouter)
+app.use('/api/posts', postRouter)
 
 
 
